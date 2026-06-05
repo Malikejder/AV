@@ -37,3 +37,26 @@ The tool is standalone and depends primarily on Python's native standard library
    git clone [https://github.com/yourusername/ejder-av.git](https://github.com/yourusername/ejder-av.git)
    cd ejder-av
    chmod +x ejder_av.py
+2. CLI Automation Mode
+
+You can bypass the menu by parsing arguments directly:
+
+Scan a single file:
+
+    python3 ejder_av.py -f /path/to/suspicious_file.exe
+
+Query a specific IP or Hostname:
+
+    python3 ejder_av.py -i 8.8.8.8
+
+Perform bulk scanning on a directory recursively:
+
+    python3 ejder_av.py -d /home/user/Downloads
+
+Query a standalone SHA256/MD5 hash:
+
+    python3 ejder_av.py -H e684c5aa42e21bc9c811347071fdf06c59b64dc4f9408b0493392330a84d4b1a
+
+Pass API keys via command line (One-time or Initialization):
+
+    python3 ejder_av.py --threatfox-key YOUR_KEY --malwarebazaar-key YOUR_KEY
